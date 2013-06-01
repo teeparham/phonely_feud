@@ -1,12 +1,3 @@
-\#*
-*~
-.#*
-*.swp
-.DS_Store
-.idea
-.loadpath
-.project
-.sass-cache
 .bundle
 bin
 config/database.yml
