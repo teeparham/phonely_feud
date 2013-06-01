@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <title>PhonelyFeud</title>
+  <meta charset="utf-8" />
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+  <title>Phonely Feud</title>
+
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<!-- Header and Nav -->
+<div class="row">
+  <div class="twelve columns">
+    <div class="panel">
+      <h1>Phonely Feud</h1>
+      <h2>Is this phone number a scam?</h2>
+    </div>
+  </div>
+</div>
+<!-- End Header and Nav -->
 
 <%= yield %>
 
