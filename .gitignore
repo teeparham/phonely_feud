@@ -1,0 +1,17 @@
+\#*
+*~
+.#*
+*.swp
+.DS_Store
+.idea
+.loadpath
+.project
+.sass-cache
+.bundle
+bin
+config/database.yml
+db/*.sqlite3*
+log
+public/system
+public/assets
+tmp
