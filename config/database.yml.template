@@ -1,0 +1,27 @@
+pg: &pg
+  # username: tee
+  adapter: postgresql
+  host: localhost
+
+development:
+  <<: *pg
+  host: localhost
+  min_messages: warning
+  pool: 5
+  timeout: 5000
+  database: phonely_feud_development
+
+test:
+  <<: *pg
+  host: localhost
+  min_messages: warning
+  pool: 5
+  timeout: 5000
+  database: phonely_feud_test<%= ENV['TEST_ENV_NUMBER'] %>
+
+production:
+  <<: *pg
+  database: phonely_feud_production
+  pool: 5
+  timeout: 5000
+
