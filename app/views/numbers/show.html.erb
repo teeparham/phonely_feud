@@ -1,2 +1,25 @@
-<h1>Numbers#show</h1>
-<p>Find me in app/views/numbers/show.html.erb</p>
+<div class="six columns push-three">
+  <div class="row">
+    <div class="ten columns">
+      <h1><%= number_to_phone @number.digits %></h1>
+    </div>
+  </div>
+
+  <!-- Feed Entry -->
+  <div class="row">
+    <div class="ten columns">
+      <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+      <ul class="inline-list">
+        <li><a href="">Comment</a></li>
+      </ul>
+
+      <h6>2 Comments</h6>
+      <div class="row">
+        <div class="ten columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
+      </div>
+    </div>
+  </div>
+  <!-- End Feed Entry -->
+
+  <hr />
+</div>

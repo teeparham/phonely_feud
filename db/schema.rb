@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130601214939) do
+ActiveRecord::Schema.define(version: 20130602183947) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "hstore"
 
   create_table "numbers", force: true do |t|
-    t.integer  "digits"
+    t.integer  "digits",     limit: 8, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
