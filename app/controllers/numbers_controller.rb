@@ -5,6 +5,7 @@ class NumbersController < ApplicationController
 
   def show
     @number = Number.find_by_digits(params[:id])
+    @comment = @number.comments.new
   end
 
   def create

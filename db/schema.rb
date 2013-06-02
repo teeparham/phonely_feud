@@ -11,11 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130602183947) do
+ActiveRecord::Schema.define(version: 20130602203744) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "hstore"
+
+  create_table "comments", force: true do |t|
+    t.text     "text"
+    t.integer  "vote"
+    t.integer  "number_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "numbers", force: true do |t|
     t.integer  "digits",     limit: 8, null: false

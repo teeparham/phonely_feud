@@ -2,7 +2,7 @@
   <div class="six columns push-three">
     <%= form_for(@number, url: numbers_path) do |f| %>
       <%= f.text_field :digits %>
-      <%= f.submit "Search" %>
+      <%= f.submit "Search", class: "button round" %>
     <% end %>
   </div>
 </div>
