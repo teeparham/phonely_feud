@@ -1,8 +1,8 @@
 <div class="row">
-  <div class="six columns push-three">
+  <div class="small-6 large-4 columns">
     <%= form_for(@number, url: numbers_path) do |f| %>
-      <%= f.text_field :digits %>
-      <%= f.submit "Search", class: "button round" %>
+      <%= f.text_field :digits, placeholder: "800-123-4567" %>
+      <%= f.submit "Search", class: "button" %>
     <% end %>
   </div>
 </div>
