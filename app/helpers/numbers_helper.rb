@@ -2,9 +2,9 @@ module NumbersHelper
 
   def vote_label(vote)
     if vote == 1
-      raw %Q{<span class="alert label">Scam</span>}
+      content_tag(:span, "Scam", class: "alert label")
     else
-      raw %Q{<span class="success label">OK</span>}
+      content_tag(:span, "OK", class: "success label")
     end
   end
 

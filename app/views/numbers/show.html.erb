@@ -1,43 +1,62 @@
 <div class="columns">
   <div class="row">
-    <div class="columns">
-      <h1><%= number_to_phone @number.digits %></h1>
-      <h3><%= @number.scam_count %> Say it is a scam</h3>
-      <h3><%= @number.ok_count %> Say it is not a scam</h3>
+
+    <h1>
+      <div class="row">
+        <div class="columns">
+          <%= number_to_phone @number.digits %>
+        </div>
+      </div>
+    </h1>
+
+    <h3>
+      <div class="row">
+        <div class="columns">
+          <div class="large-6 centered columns label alert"><%= @number.scam_count %> Scam</div>
+          <div class="large-6 centered columns label success"><%= @number.ok_count %> Not a scam</div>
+        </div>
+      </div>
+    </h3>
+
+    <div class="row">
+      <div class="columns">
+        <div class="panel">
+          <h5>Did they call you?</h5>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <br/>
+    <div class="row">
+      <div class="columns">
+        <%= form_for(@comment, url: number_comments_path(@number.id)) do |f| %>
+          <%= f.hidden_field :vote, value: 1 %>
+          <%= f.text_field :text, placeholder: "It's a scam. Enter a comment here ..." %>
+          <%= f.submit "This is a scam!", class: "button alert" %>
+        <% end %>
 
-  <div class="row">
-    <div class="columns">
-      <h5>Did they call you?</h5>
+        <%= form_for(@comment, url: number_comments_path(@number.id)) do |f| %>
+          <%= f.hidden_field :vote, value: 0 %>
+          <%= f.text_field :text, placeholder: "It's not a scam. Enter a comment here ..." %>
+          <%= f.submit "This is not a scam", class: "button success" %>
+        <% end %>
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="columns">
-      <%= form_for(@comment, url: number_comments_path(@number.id)) do |f| %>
-        <%= f.hidden_field :vote, value: 1 %>
-        <%= f.text_field :text, placeholder: "It's a scam. Enter a comment here ..." %>
-        <%= f.submit "This is a scam!", class: "button alert" %>
-      <% end %>
-
-      <%= form_for(@comment, url: number_comments_path(@number.id)) do |f| %>
-        <%= f.hidden_field :vote, value: 0 %>
-        <%= f.text_field :text, placeholder: "It's not a scam. Enter a comment here ..." %>
-        <%= f.submit "This is not a scam", class: "button success" %>
-      <% end %>
+    <div class="row">
+      <div class="columns">
+        <div class="panel">
+          <h5>Responses</h5>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="columns">
-      <% @number.comments.order("created_at desc").each do |comment| %>
-        <%= render 'comment', comment: comment %>
-      <% end %>
+    <div class="row">
+      <div class="columns">
+        <% @number.comments.order("created_at desc").each do |comment| %>
+          <%= render 'comment', comment: comment %>
+        <% end %>
+      </div>
     </div>
-  </div>
 
-  <hr />
+  </div>
 </div>
