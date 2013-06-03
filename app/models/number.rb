@@ -20,7 +20,7 @@ class Number < ActiveRecord::Base
   end
 
   def to_param
-    digits
+    digits.to_s.gsub(/(\d{0,3})(\d{3})(\d{4})$/,"\\1-\\2-\\3")
   end
 
 end

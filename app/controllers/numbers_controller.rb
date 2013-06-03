@@ -4,8 +4,12 @@ class NumbersController < ApplicationController
   end
 
   def show
-    @number = Number.find_by_digits(params[:id])
-    @comment = Comment.new
+    digits = Number.clean_digits params[:id]
+    if (@number = Number.find_by_digits(digits))
+      @comment = Comment.new
+    else
+      redirect_to numbers_path
+    end
   end
 
   def create
