@@ -28,7 +28,7 @@
   </div>
 
   <div class="row">
-    <% @number.comments.order("created_at desc").first(@number.comments.count).each do |comment| %>
+    <% @number.comments.order("created_at desc").each do |comment| %>
       <%= render 'comment', comment: comment %>
     <% end %>
   </div>
