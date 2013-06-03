@@ -11,7 +11,7 @@ PhonelyFeud::Application.routes.draw do
     resources :comments, only: [:create]
   end
 
-  # route /123-123-1234
+  # /123-123-1234
   get '*id' => 'numbers#show', constraints: NumberRouteConstraint, as: :number
 end
 

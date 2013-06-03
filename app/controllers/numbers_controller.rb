@@ -5,17 +5,17 @@ class NumbersController < ApplicationController
 
   def show
     digits = Number.clean_digits params[:id]
-    if (@number = Number.find_by_digits(digits))
+    if find_number(digits)
       @comment = Comment.new
     else
-      redirect_to numbers_path
+      redirect_to root_path
     end
   end
 
   def create
     digits = Number.clean_digits params[:number][:digits]
 
-    if (@number = Number.where(digits: digits).first)
+    if find_number(digits)
       redirect_to number_path(@number)
     else
       @number = Number.new(digits: digits)
@@ -25,6 +25,12 @@ class NumbersController < ApplicationController
         render :index
       end
     end
+  end
+
+private
+
+  def find_number(digits)
+    @number = Number.find_by_digits(digits)
   end
 
 end

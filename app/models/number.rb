@@ -1,5 +1,5 @@
 class Number < ActiveRecord::Base
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   validates :digits, presence: true
   validates_length_of :digits, is: 10, message: "must be 10 digits"
@@ -20,7 +20,7 @@ class Number < ActiveRecord::Base
   end
 
   def to_param
-    digits.to_s.gsub(/(\d{0,3})(\d{3})(\d{4})$/,"\\1-\\2-\\3")
+    digits.gsub(/(\d{0,3})(\d{3})(\d{4})$/,"\\1-\\2-\\3")
   end
 
 end
