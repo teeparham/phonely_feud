@@ -2,7 +2,7 @@
 
 This is a Rails 4 web application where you enter a phone number and see if it is a scam or not.
 
-## [See it here](http://phonely-feud.heroku.com)
+## [See it here](http://phonely-feud.herokuapp.com)
 
 ### Development
 
