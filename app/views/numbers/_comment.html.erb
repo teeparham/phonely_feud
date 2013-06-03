@@ -1,7 +1,13 @@
-<div class="ten columns">
+<div class="columns">
   <p>
-    <%= l comment.created_at %>
-    <%= vote_label(comment.vote) %>
-    <%= comment.text  %>
+    <div class="large-2 columns">
+      <%= l comment.created_at %>
+    </div>
+    <div class="large-2 small-3 columns">
+      <%= vote_label(comment.vote) %>
+    </div>
+    <div class="large-8 small-9 columns">
+      <%= comment.text %>
+    </div>
   </p>
 </div>
