@@ -11,6 +11,14 @@ the [National Day of Civic Hacking](http://hackforchange.org/).
 
 ## [Visit the website](http://phonely-feud.herokuapp.com)
 
+### Stack
+
+* Rails 4.0
+* Ruby 2.0
+* Postgresql 9.2
+* Zurb Foundation
+* Hosted on [Heroku](https://heroku.com)
+
 ### Development
 
 Install these things:
