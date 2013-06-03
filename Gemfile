@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# heroku
+ruby '2.0.0'
+
 gem 'rails', '4.0.0.rc1'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'zurb-foundation'
@@ -19,4 +22,8 @@ end
 
 group :development, :test do
   gem 'debugger'
+end
+
+group :production do
+  gem 'unicorn'
 end
