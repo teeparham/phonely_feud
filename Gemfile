@@ -13,7 +13,8 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 group :development do
-  gem 'unicorn'
+  gem 'quiet_assets'
+  gem 'unicorn-rails'
   # gem 'capistrano'
 end
 
