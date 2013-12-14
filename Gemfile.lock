@@ -28,7 +28,7 @@ GEM
     arel (4.0.1)
     atomic (1.1.14)
     builder (3.1.4)
-    byebug (1.8.2)
+    byebug (2.5.0)
       columnize (~> 0.3.6)
       debugger-linecache (~> 1.2.0)
     coffee-rails (4.0.1)
