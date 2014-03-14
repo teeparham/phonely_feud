@@ -14,7 +14,7 @@ the [National Day of Civic Hacking](http://hackforchange.org/).
 ### Stack
 
 * Rails 4.0
-* Ruby 2.0
+* Ruby 2.1
 * Postgresql 9.2
 * Zurb Foundation
 * Hosted on [Heroku](https://heroku.com)
@@ -23,7 +23,7 @@ the [National Day of Civic Hacking](http://hackforchange.org/).
 
 Install these things:
 
-* ruby 2.0
+* ruby 2.1
 * Postgresql 9.2
 
 Fork/clone the repository.
